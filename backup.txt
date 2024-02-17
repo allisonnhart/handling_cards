@@ -1,0 +1,92 @@
+import React, { useState } from 'react';
+import './App.css';
+import './index.css';
+import './button.css';
+import { CATEGORIES, SUBCATEGORIES } from './categoriesConfig.js';
+import Quotes from './Quotes';
+
+function App() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+
+  const handleSelectCategory = (category) => {
+    setSelectedCategory(category);
+    setSelectedSubcategory(null);
+  };
+
+  const handleSelectSubcategory = (subcategory) => {
+    setSelectedSubcategory(subcategory);
+  };
+
+  const QuoteList = ({ selectedCategory, selectedSubcategory }) => {
+    // Filter the quotes based on selectedCategory and selectedSubcategory
+    const filteredQuotes = Quotes.filter((quote) => {
+      if (selectedCategory && selectedSubcategory) {
+        return (
+          quote.category === selectedCategory &&
+          quote.subcategory === selectedSubcategory
+        );
+      } else if (selectedCategory) {
+        return quote.category === selectedCategory;
+      } else if (selectedSubcategory) {
+        return quote.subcategory === selectedSubcategory;
+      }
+      return true; // Display all quotes if both are null
+    });
+
+    console.log("Selected Category:", selectedCategory);
+    console.log("Selected Subcategory:", selectedSubcategory);
+    console.log("Filtered Quotes:", filteredQuotes);
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          <a>
+            Waterparks Lyrics !!!
+          </a>
+
+          {/* Render buttons for categories */}
+          {Object.values(CATEGORIES).map((category) => (
+            <button
+              key={category}
+              className={`button ${selectedCategory === category ? 'selected' : ''}`}
+              onClick={() => handleSelectCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+
+          {/* Render subcategory buttons if a category is selected */}
+          {selectedCategory && (
+            <div>
+              {Object.values(SUBCATEGORIES[selectedCategory]).map((subcategory) => (
+                <button
+                  key={subcategory}
+                  className={`button ${selectedSubcategory === subcategory ? 'selected' : ''}`}
+                  onClick={() => handleSelectSubcategory(subcategory)}
+                >
+                  {subcategory}
+                </button>
+              ))}
+            </div>
+          )}
+
+
+          {/* Render filtered quotes */}
+          {console.log(QuoteList)}
+          <div>
+            {QuoteList.map((quote) => (
+              <div key={quote.id}>
+                <p>{quote.text}</p>
+                <p>{quote.year}</p>
+              </div>
+            ))}
+          </div>
+
+        </header >
+      </div >
+    );
+  }
+}
+
+export default App;

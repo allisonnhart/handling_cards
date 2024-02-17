@@ -68,3 +68,139 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+
+//the code that was given in app.js before I messed with it
+
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+
+  const handleSelectCategory = (category) => {
+
+    setSelectedCategory(category.name);
+    
+    setSelectedSubcategory(null);
+    
+    };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+        
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+//code for app.css given before I changed it
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+        {/* Render buttons for categories */}
+        {Object.values(CATEGORIES).map((category) => (
+          <button
+            key={category}
+            className={`button ${selectedCategory === category ? 'selected' : ''}`}
+            onClick={() => handleSelectCategory(category)}
+          >
+            {category} 
+          </button>
+        ))}
+
+        {/* Render subcategory buttons if a category is selected */}
+        {selectedCategory && (
+          <div>
+            {Object.values(SUBCATEGORIES[selectedCategory]).map((subcategory) => (
+              <button
+                key={subcategory}
+                className={`button ${selectedSubcategory === subcategory ? 'selected' : ''}`}
+                onClick={() => handleSelectSubcategory(subcategory)}
+              >
+                {subcategory}
+              </button>
+            ))}
+          </div>
+        )}
+
+
+
+
+
+
