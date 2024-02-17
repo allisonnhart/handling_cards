@@ -3,7 +3,7 @@ import './App.css';
 import './index.css';
 import './button.css';
 import { CATEGORIES, SUBCATEGORIES } from './categoriesConfig.js';
-import Quotes from './Quotes';
+import Quotes from './Quotes.js';
 
 console.log("Quotes:", Quotes); // Logging the Quotes array
 
