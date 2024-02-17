@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/allisonnhart/handling_cards.git/static/css/main.b8f23a8e.css",
+    "main.js": "/allisonnhart/handling_cards.git/static/js/main.63fb2b56.js",
+    "static/js/592.557b4f45.chunk.js": "/allisonnhart/handling_cards.git/static/js/592.557b4f45.chunk.js",
+    "index.html": "/allisonnhart/handling_cards.git/index.html",
+    "main.b8f23a8e.css.map": "/allisonnhart/handling_cards.git/static/css/main.b8f23a8e.css.map",
+    "main.63fb2b56.js.map": "/allisonnhart/handling_cards.git/static/js/main.63fb2b56.js.map",
+    "592.557b4f45.chunk.js.map": "/allisonnhart/handling_cards.git/static/js/592.557b4f45.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8f23a8e.css",
+    "static/js/main.63fb2b56.js"
+  ]
+}
