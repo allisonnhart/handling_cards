@@ -23,17 +23,9 @@ function App() {
   const filteredQuotes = Quotes.filter((quote) => {
     const categoryMatch = (!selectedCategory || quote.category === selectedCategory);
     const subcategoryMatch = (!selectedSubcategory || quote.subcategory === selectedSubcategory);
-    
-    console.log("Quote:", quote);
-    console.log("Category Match:", categoryMatch);
-    console.log("Subcategory Match:", subcategoryMatch);
   
     return categoryMatch && subcategoryMatch;
   });
-
-  console.log("Selected Category:", selectedCategory);
-  console.log("Selected Subcategory:", selectedSubcategory);
-  console.log("Filtered Quotes:", filteredQuotes)
 
   return (
     <div className="App">
