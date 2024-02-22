@@ -3,9 +3,9 @@ import './App.css';
 import './index.css';
 import './button.css';
 import { CATEGORIES, SUBCATEGORIES } from './categoriesConfig.js';
-import Quotes from './Quotes.js';
+import {classes} from './Classes.js';
 
-console.log("Quotes:", Quotes); // Logging the Quotes array
+
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -20,26 +20,20 @@ function App() {
     setSelectedSubcategory(subcategory);
   };
 
-  const filteredQuotes = Quotes.filter((quote) => {
-    const categoryMatch = (!selectedCategory || quote.category === selectedCategory);
-    const subcategoryMatch = (!selectedSubcategory || quote.subcategory === selectedSubcategory);
-    
-    console.log("Quote:", quote);
-    console.log("Category Match:", categoryMatch);
-    console.log("Subcategory Match:", subcategoryMatch);
+  const filteredClasses = classes.filter((c) => {
+    const categoryMatch = (!selectedCategory || c.category === selectedCategory);
+    const subcategoryMatch = (!selectedSubcategory || c.subcategory === selectedSubcategory);
+
   
     return categoryMatch && subcategoryMatch;
   });
 
-  console.log("Selected Category:", selectedCategory);
-  console.log("Selected Subcategory:", selectedSubcategory);
-  console.log("Filtered Quotes:", filteredQuotes)
 
   return (
     <div className="App">
       <header className="App-header">
         <a>
-          Waterparks Lyrics !!!
+          Software Engineering Class Path 
         </a>
 
         {/* Render buttons for categories */}
@@ -72,10 +66,10 @@ function App() {
 
         {/* Render filtered quotes */}
         <div className="quotes-container"> {/* Added container for quotes */}
-          {filteredQuotes.map((quote) => (
-            <div key={quote.id} className="quote"> {/* Added class name for quote */}
-              <p className="quote-text">{quote.text}</p> {/* Added class name for quote text */}
-              <p className="quote-year">{quote.year || quote.date}</p> {/* Added class name for quote year */}
+          {filteredClasses.map((c) => (
+            <div key={c.id} className="quote"> {/* Added class name for quote */}
+              <p className="quote-text">{c.course}</p> {/* Added class name for quote text */}
+              <p className="quote-year">{c.name}</p> {/* Added class name for quote year */}
             </div>
           ))}
         </div>
