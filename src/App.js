@@ -5,7 +5,7 @@ import './button.css';
 import { CATEGORIES, SUBCATEGORIES } from './categoriesConfig.js';
 import {classes} from './Classes.js';
 
-
+// this is a test
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
