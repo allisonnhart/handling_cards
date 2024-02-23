@@ -73,7 +73,7 @@ function App() {
               <p className="class-course">{c.course}</p> {/* Added class name for quote text */}
               <p className="class-name">{c.name}</p> {/* Added class name for quote year */}
               <p className='class-description'>{c.description}</p>
-              {c.link && <a className='class-link' href={c.link} target="_blank">Click here for more information!</a>}
+              {c.link && <a className='class-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information!</a>}
             </div>
           ))}
         </div>
