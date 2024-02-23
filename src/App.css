@@ -2,6 +2,10 @@
 
 @import url('./button.css');
 
+body {
+  background-color: rgb(19, 17, 38);
+}
+
 h2 {
   margin: 0.5em;
 }
@@ -86,11 +90,11 @@ p {
 }
 
 a.class-link:link {
-  color: white;
+  color: lightpink;
 }
 
 a.class-link:visited {
-  color: white;
+  color: lightpink;
 }
 
 a.class-link:hover {
