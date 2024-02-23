@@ -65,11 +65,13 @@ function App() {
         )}
 
         {/* Render filtered quotes */}
-        <div className="quotes-container"> {/* Added container for quotes */}
+        <div className="class-container"> {/* Added container for quotes */}
           {filteredClasses.map((c) => (
-            <div key={c.id} className="quote"> {/* Added class name for quote */}
-              <p className="quote-text">{c.course}</p> {/* Added class name for quote text */}
-              <p className="quote-year">{c.name}</p> {/* Added class name for quote year */}
+            <div key={c.id} className="class"> {/* Added class name for quote */}
+              <p className="class-course">{c.course}</p> {/* Added class name for quote text */}
+              <p className="class-name">{c.name}</p> {/* Added class name for quote year */}
+              <p className='class-description'>{c.description}</p>
+              <a className='class-link' href={c.link}>Click here for more information!</a>
             </div>
           ))}
         </div>
