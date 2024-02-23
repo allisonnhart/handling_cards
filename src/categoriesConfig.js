@@ -23,6 +23,8 @@ export const SUBCATEGORIES = {
     },
     [CATEGORIES.SENIOR]: {
         FALL: 'Fall',
-        WINTER: 'Winter'
+        WINTER: 'Winter',
+        ELECTA: "Elective A",
+        ELECTB: "Elective B"
     }
 };
