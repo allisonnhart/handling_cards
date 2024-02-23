@@ -39,11 +39,16 @@
 }
 
 /* Add styles for class.class text */
-.class-text {
+.class-course {
   font-size: 16px; /* Adjust font size as needed */
 }
 
 /* Add styles for class.class year */
-.class-year {
+.class-name {
   font-size: 14px; /* Adjust font size as needed */
 }
+
+.class-description {
+  font-size: 14px; /* Adjust font size as needed */
+}
+
