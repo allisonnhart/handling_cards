@@ -114,4 +114,44 @@ export const classes = [
         category: CATEGORIES.JUNIOR,
         subcategory: SUBCATEGORIES[CATEGORIES.JUNIOR].WINTER
     },
+    {
+        id: 480,
+        course: "CS SE 480",
+        name: "Capstone 1",
+        description: "",
+        category: CATEGORIES.SENIOR,
+        subcategory: SUBCATEGORIES[CATEGORIES.SENIOR].FALL
+    },
+    {
+        id: 400,
+        course: "Elective A",
+        name: "Select a course from the Elective A group of courses",
+        description: "",
+        category: CATEGORIES.SENIOR,
+        subcategory: SUBCATEGORIES[CATEGORIES.SENIOR].FALL
+    },
+    {
+        id: 401,
+        course: "Elective A or B",
+        name: "Select a course from the Elective A or Elective B group of courses",
+        description: "",
+        category: CATEGORIES.SENIOR,
+        subcategory: SUBCATEGORIES[CATEGORIES.SENIOR].WINTER
+    },
+    {
+        id: 481,
+        course: "CS SE 481",
+        name: "Capstone 2",
+        description: "",
+        category: CATEGORIES.SENIOR,
+        subcategory: SUBCATEGORIES[CATEGORIES.SENIOR].WINTER
+    },
+    {
+        id: 402,
+        course: "Elective A or B",
+        name: "Select a course from the Elective A or Elective B group of courses",
+        description: "",
+        category: CATEGORIES.SENIOR,
+        subcategory: SUBCATEGORIES[CATEGORIES.SENIOR].WINTER
+    },
 ]
