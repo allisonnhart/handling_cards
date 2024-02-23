@@ -31,17 +31,19 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <a>
-          Software Engineering Class Path 
-        </a>
+      <div className="App-holder">
+        <header className="App-header">
+          <h2>
+            Software Engineering Class Path 
+          </h2>
+        </header>
 
         {/* Render buttons for categories */}
         <div className="horizontal-buttons"> {/* Added container for horizontal buttons */}
           {Object.values(CATEGORIES).map((category) => (
             <button
               key={category}
-              className={`button ${selectedCategory === category ? 'selected' : ''}`}
+              className={`button${selectedCategory === category ? '-selected' : ''}`}
               onClick={() => handleSelectCategory(category)}
             >
               {category}
@@ -55,7 +57,7 @@ function App() {
             {Object.values(SUBCATEGORIES[selectedCategory]).map((subcategory) => (
               <button
                 key={subcategory}
-                className={`button ${selectedSubcategory === subcategory ? 'selected' : ''}`}
+                className={`button${selectedSubcategory === subcategory ? '-selected' : ''}`}
                 onClick={() => handleSelectSubcategory(subcategory)}
               >
                 {subcategory}
@@ -65,16 +67,17 @@ function App() {
         )}
 
         {/* Render filtered quotes */}
-        <div className="quotes-container"> {/* Added container for quotes */}
+        <div className="class-container"> {/* Added container for quotes */}
           {filteredClasses.map((c) => (
-            <div key={c.id} className="quote"> {/* Added class name for quote */}
-              <p className="quote-text">{c.course}</p> {/* Added class name for quote text */}
-              <p className="quote-year">{c.name}</p> {/* Added class name for quote year */}
+            <div key={c.id} className="class"> {/* Added class name for quote */}
+              <p className="class-course">{c.course}</p> {/* Added class name for quote text */}
+              <p className="class-name">{c.name}</p> {/* Added class name for quote year */}
+              <p className='class-description'>{c.description}</p>
+              {c.link && <a className='class-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information!</a>}
             </div>
           ))}
         </div>
-
-      </header>
+      </div>
     </div>
   );
 }
