@@ -104,7 +104,7 @@ export const classes = [
         id: 329,
         course: "CS 329",
         name: "Testing, Analysis, and Verification",
-        description: "",
+        description: "Fundamental challenge of software quality through the entire software product life-cycle. Sound engineering principles to ensure and assure quality at each stage of the life-cycle with an emphasis in early stages on testing techniques, dynamic and static program analysis, and formal verification for high assurance systems.",
         category: CATEGORIES.JUNIOR,
         subcategory: SUBCATEGORIES[CATEGORIES.JUNIOR].WINTER,
         link: "https://catalog.byu.edu/courses/13780-000"
@@ -179,7 +179,7 @@ export const classes = [
         link: "https://catalog.byu.edu/courses/10181-000"
     },
     {
-        id: 260,
+        id: 261,
         course: "CS 260",
         name: "Web Programming",
         description: "Introduction to web application design and implementation. Both front end and back end development with an emphasis on REST architectures.",
