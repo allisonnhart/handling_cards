@@ -1,7 +1,7 @@
 {
   "name": "handling-cards",
   "version": "0.1.0",
-  "homepage": "https://allisonnhart.github.io/handling_cards/",
+  "homepage": "https://AllisonHartBYU.github.io/handling_cards",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
