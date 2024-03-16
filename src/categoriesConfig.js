@@ -1,30 +1,58 @@
 // categoriesConfig.js
 export const CATEGORIES = {
-    FRESHMAN: 'Freshman',
-    SOPHOMORE: 'Sophomore',
-    JUNIOR: 'Junior',
-    SENIOR: 'Senior',
+    SOFTWARE: 'Software',
+    ALGORITHMS: 'Algorithms',
+    LLS: 'Low Level Systems/Computer Security',
+    BASICS: 'Basics',
+    MISC: 'Miscellaneous Topics',
+    SPECIAL: 'Special Courses'
+};
+
+export const SUBCATEGORIES = {
+    [CATEGORIES.SOFTWARE]: {
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
+    },
+    [CATEGORIES.ALGORITHMS]: {
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
+    },
+    [CATEGORIES.LLS]: {
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
+    },
+    [CATEGORIES.BASICS]: {
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
+    },
+    [CATEGORIES.MISC]: {
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
+    },
+    [CATEGORIES.SPECIAL]: {
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
+    }
 };
 
 
-
-export const SUBCATEGORIES = {
+/*export const SUBCATEGORIES = {
     [CATEGORIES.FRESHMAN]: {
-        FALL: 'Fall',
-        WINTER: 'Winter'
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
     },
     [CATEGORIES.SOPHOMORE]: {
-        FALL: 'Fall',
-        WINTER: 'Winter'
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
     },
     [CATEGORIES.JUNIOR]: {
-        FALL: 'Fall',
-        WINTER: 'Winter'
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective'
     },
     [CATEGORIES.SENIOR]: {
-        FALL: 'Fall',
-        WINTER: 'Winter',
+        REQUIRED: 'Required',
+        ELECTIVE: 'Elective',
         ELECTA: "Elective A",
         ELECTB: "Elective B"
     }
-};
+};*/
